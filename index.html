@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supermarket Basket</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="basket" aria-labelledby="basket-title">
+        <h1 id="basket-title">Basket</h1>
+        <div id="basket-items" class="basket__items" aria-live="polite"></div>
+      </section>
+
+      <section class="tag-selector" aria-labelledby="tag-selector-title">
+        <h2 id="tag-selector-title">Available Items</h2>
+        <div class="tags" id="tag-list">
+          <!-- Tags will be rendered here -->
+        </div>
+      </section>
+
+      <section class="custom-item" aria-labelledby="custom-item-title">
+        <h2 id="custom-item-title">Add Your Own Item</h2>
+        <form id="item-form" class="item-form" autocomplete="off">
+          <label class="sr-only" for="item-input">Type an item to add to your basket</label>
+          <input
+            type="text"
+            id="item-input"
+            class="item-form__input"
+            placeholder="e.g. apples"
+            required
+          />
+          <button type="submit" class="item-form__button">Add to Basket</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
